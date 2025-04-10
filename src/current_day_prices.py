@@ -1,4 +1,5 @@
 import thread
+import os
 import pandas as pd
 from datetime import datetime
 import data_scrape
@@ -29,7 +30,8 @@ for i, soup in enumerate(results):
                 print(f"Failed to fetch content from URL {url_list[i]}")
 
 
-#today = datetime.today().strftime('%Y_%m_%d')
+os.makedirs("data", exist_ok=True)
+
 filename = f"data/stock_prices_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
 price_df.to_csv(filename, index=False)
 
