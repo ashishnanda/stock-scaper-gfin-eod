@@ -1,0 +1,4 @@
+# Ignore output data
+data/
+__pycache__/
+*.pyc
