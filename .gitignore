@@ -1,4 +1,13 @@
-# Ignore output data
+# Ignore data folders and logs
 data/
+artifact_downloader/downloaded_data/
+artifact_downloader/successful_downloads.csv
+
+
+# Python stuff
 __pycache__/
 *.pyc
+
+# System files
+.DS_Store.env
+.env
